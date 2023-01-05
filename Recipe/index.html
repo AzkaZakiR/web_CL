@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Task CodeLabs Azka Zaki</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="meal-wrapper">
+        <div class="meal-search">
+
+          <h2>Find your desired meals</h2>
+          <div class = "meal-search-box">
+            <input type = "text" class = "search-control" placeholder="Enter an ingredient" id = "search-input">
+            <button type ="submit" class = "search-btn btn" id = "search-btn" >
+              <i class = "fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class = "meal-result">
+            <h2 class = "title">Your Search Results:</h2>
+            <div id= "meal">
+            </div>
+          </div>
+        </div>
+
+        <div class="meal-details">
+            <button type="button" class="btn recipe-close-btn" id="recipe-close-btn" src="search.png">
+              
+            </button>
+            
+            <div class="meal-details-content">
+            </div>
+        </div>
+        <img src="search.png" alt="">
+      </div>
+    </div>
+
+    <script src="js/index.js"></script>
+    <script>
+        function searchKeyPress(e)
+        {
+            // look for window.event in case event isn't passed in
+            e = e || window.event;
+            if (e.keyCode == 13)
+            {
+                document.getElementById('search-btn').click();
+                return false;
+            }
+            return true;
+        }
+        </script>
+  </body>
+</html>
